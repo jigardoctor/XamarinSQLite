@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinSQLite"
+             x:Class="XamarinSQLite.MainPage">
+    <StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Image x:Name="imgBanner" Source="banner.png" ></Image>
+                <Label Margin="20,0,20,5" Text="Digital Shubham " FontAttributes="Bold" FontSize="Large" TextColor="DeepSkyBlue" HorizontalTextAlignment="Center" ></Label>
+                <Entry Margin="20,0,20,5" x:Name="txtPersonId" HorizontalTextAlignment="Center" Placeholder="PersonId Update and Delete"></Entry>
+                <DatePicker Margin="20,0,10,5" x:Name="txtdate" ></DatePicker>
+                <Entry Margin="20,0,20,5" x:Name="txtShift" HorizontalTextAlignment="Center" Placeholder="Day / Night"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtName" HorizontalTextAlignment="Center"  Placeholder=" Person Name"></Entry>
+                <Entry Margin="20,0,20,5"  x:Name="txtDesignno" HorizontalTextAlignment="Center" Placeholder=" Designno"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtMachine" HorizontalTextAlignment="Center" Placeholder=" Machine No"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtStiches" HorizontalTextAlignment="Center" Placeholder="Stiches"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtFrame" HorizontalTextAlignment="Center" Placeholder=" Frame"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtTb" HorizontalTextAlignment="Center" Placeholder=" T.B. "></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtHajri" HorizontalTextAlignment="Center" Placeholder=" Hajri"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtPagar" HorizontalTextAlignment="Center" Placeholder=" Pagar"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtBonus" HorizontalTextAlignment="Center" Placeholder=" Bonus"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtTotal" HorizontalTextAlignment="Center" Placeholder=" Total"></Entry>
+                <Entry Margin="20,0,20,5" x:Name="txtRemark" HorizontalTextAlignment="Center" Placeholder="  Remark"></Entry>
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnAdd" WidthRequest="200" Text="Add" Clicked="BtnAdd_Clicked" />
+                    <Button x:Name="btnRead" WidthRequest="200" Text="Read" Clicked="BtnRead_Clicked" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnUpdate" WidthRequest="200" Text="Update" Clicked="BtnUpdate_Clicked"/>
+                    <Button x:Name="btnDelete" WidthRequest="200" Text="Delete" Clicked="BtnDelete_Clicked" />
+                </StackLayout>
+                <ListView x:Name="lstPersons">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}" Detail="{Binding PersonID}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
